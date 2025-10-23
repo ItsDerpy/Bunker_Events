@@ -7,14 +7,14 @@
 
 /* Background configuration */
 body {
-  background-color: black; /* Fills any space not covered by the image */
-  background-image: url("WebBackG.png");
+  background-color: black; /* Fills any unused space */
+  background-image: url("assets/WebBackG.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; /* Ensures the entire image fits in the viewport */
+  background-size: contain; /* Makes the whole image visible */
   height: 100vh;
   width: 100vw;
-  overflow: hidden; /* Prevents scrolling */
+  overflow: hidden; /* Prevents scrollbars */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@ body {
   color: white;
 }
 
-/* Optional overlay for readability */
+/* Slight dark overlay for readability */
 .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
