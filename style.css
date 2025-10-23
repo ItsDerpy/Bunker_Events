@@ -1,62 +1,82 @@
-/* Reset default browser styles */
+/* Reset a základné nastavenia */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Full-screen responsive background */
 body {
   background-image: url("./assets/WebBackG.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover; /* Fills the entire screen */
-  background-attachment: fixed; /* Keeps background steady on scroll (desktop only) */
+  background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
   width: 100vw;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
 
-/* Optional overlay for readability */
+/* Polopriehľadná vrstva pre lepšiu čitateľnosť */
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border-radius: 12px;
+  width: 90%;
   max-width: 800px;
+  overflow-y: auto;
+  max-height: 90vh;
 }
 
-/* Responsive typography */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+/* Hlavička */
+.header-image {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto 2rem auto;
+}
+
+/* Obsah */
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.2rem;
 }
 
 p {
-  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
 }
 
-/* --- Responsive adjustments for phones --- */
+/* Responzívne úpravy pre mobily */
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll; /* fixes mobile rendering bug */
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 1rem;
+    background-attachment: scroll;
   }
 
   .overlay {
     padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 95%;
+    max-height: 95vh;
+  }
+
+  .header-image {
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
