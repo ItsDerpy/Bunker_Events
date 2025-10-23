@@ -1,36 +1,36 @@
-/* Reset default styles */
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Background configuration */
+/* Full-screen responsive background */
 body {
-  background-color: black; /* Fills any unused space */
   background-image: url("./assets/WebBackG.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
+  background-size: cover; /* Fills the entire screen */
+  background-attachment: fixed; /* Keeps background steady on scroll (desktop only) */
   height: 100vh;
   width: 100vw;
-  overflow: hidden; /* Prevents scrollbars */
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  text-align: center;
 }
 
-/* Slight dark overlay for readability */
+/* Optional overlay for readability */
 .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 12px;
-  text-align: center;
   max-width: 800px;
 }
 
-/* Text styling */
+/* Responsive typography */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -39,4 +39,24 @@ h1 {
 p {
   font-size: 1.1rem;
   line-height: 1.6;
+}
+
+/* --- Responsive adjustments for phones --- */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* fixes mobile rendering bug */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .overlay {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
