@@ -8,7 +8,7 @@
 /* Background configuration */
 body {
   background-color: black; /* Fills any unused space */
-  background-image: url("assets/WebBackG.png");
+  background-image: url("./assets/WebBackG.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain; /* Makes the whole image visible */
